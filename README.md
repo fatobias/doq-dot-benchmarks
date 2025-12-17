@@ -18,15 +18,18 @@ The measurement directory contains many
 subdirectorie which might seem to have a crypting naming.
 here is the semantic meaning of the directory names
 
-bench_\<protocol\>_\<DNS server\>_\<number of clients\>
+bench_\<protocol\>\_\<DNS server\>\_\<number of clients\>
 
 where the DNS server is an integer number which corresponds to the
 last number of the IP address the DNS resolver listens on
 
-bench_\<protocol\>_1_...   is kresd (single worker)
-bench_\<protocol\>_3_...   is Unbound
-bench_\<protocol\>_4_...   is RouteDNS
-bench_\<protocol\>_5_...   is Knot Resolver run with manager
+bench\_\<protocol\>\_1\_...   is kresd (single worker)
+
+bench\_\<protocol\>\_3\_...   is Unbound
+
+bench\_\<protocol\>\_4\_...   is RouteDNS
+
+bench\_\<protocol\>\_5\_...   is Knot Resolver run with manager
 
 these IP addresses can be found in the dns_server_configs/*.conf
 
