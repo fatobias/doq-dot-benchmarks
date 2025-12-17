@@ -15,8 +15,8 @@ simply by the manager restarting said worker.
 contain the complete benchmark results
 from a test which was run on the 16th of october 2025.
 The measurement directory contains many
-subdirectorie which might seem to have a crypting naming.
-here is the semantic meaning of the directory names
+subdirectories which might seem to have a cryptic names.
+Here is the semantic meaning of the directory names
 
 bench_\<protocol\>\_\<DNS server\>\_\<number of clients\>
 
@@ -32,6 +32,11 @@ bench\_\<protocol\>\_4\_...   is RouteDNS
 bench\_\<protocol\>\_5\_...   is Knot Resolver run with manager
 
 these IP addresses can be found in the dns_server_configs/*.conf
+
+Each of these directories contains:
+ - 30 files storing the benchmark results.
+ - runs.json where these results are aggregated
+ - averages.json where these are averaged
 
 ## run_bench.py
 is the python script used to perform the tests
