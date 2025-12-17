@@ -1,0 +1,19 @@
+[Unit]
+Description=Unbound (benchmark)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/path/to/sbin/unbound -d -vv -c /path/to/unbound/unbound.conf
+Restart=always
+RestartSec=1
+
+# Hardening (safe to keep)
+NoNewPrivileges=true
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,28 @@
+{
+  "totalRequests": 1912262,
+  "totalSuccessResponses": 1912178,
+  "totalNegativeResponses": 0,
+  "totalErrorResponses": 0,
+  "totalIOErrors": 84,
+  "totalIDmismatch": 0,
+  "totalTruncatedResponses": 0,
+  "responseRcodes": {
+    "NOERROR": 1912178
+  },
+  "questionTypes": {
+    "A": 1912262
+  },
+  "queriesPerSecond": 63740.69,
+  "benchmarkDurationSeconds": 30,
+  "latencyStats": {
+    "minMs": 0,
+    "meanMs": 1,
+    "stdMs": 0,
+    "maxMs": 192,
+    "p99Ms": 4,
+    "p95Ms": 2,
+    "p90Ms": 2,
+    "p75Ms": 2,
+    "p50Ms": 1
+  }
+}

@@ -1,0 +1,16 @@
+workers: auto
+logging:
+  level: notice 
+  groups:
+    - manager
+    - supervisord
+network:
+  listen:
+    - interface: 127.0.0.5@8853
+      kind: doq
+    - interface: 127.0.0.5@8855
+      kind: dot
+  tls:
+    tls-cert: '/path/to/cert'
+    tls-key: '/path/to/key'
+

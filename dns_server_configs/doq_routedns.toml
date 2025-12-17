@@ -1,0 +1,23 @@
+[resolvers.cloudflare-dot]
+address = "1.1.1.1:853"
+protocol = "dot"
+
+[groups.cloudflare-cached]
+type = "cache"
+resolvers = ["cloudflare-dot"]
+backend = { type = "memory" }
+
+[listeners.local-doq]
+address = "127.0.0.4:8853"
+protocol = "doq"
+resolver = "cloudflare-cached"
+server-crt = "/path/to/cert"
+server-key = "/path/to/key"
+
+[listeners.local-dot]
+address = "127.0.0.4:8855"
+protocol = "dot"
+resolver = "cloudflare-cached"
+server-crt = "/path/to/cert"
+server-key = "/path/to/key"
+

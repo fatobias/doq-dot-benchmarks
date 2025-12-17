@@ -1,0 +1,19 @@
+[Unit]
+Description=Knot Resolver kresd (benchmark)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=ftobias
+WorkingDirectory=/path/to/working/dir
+ExecStart=/path/to/knot-resolver/build_kresd/daemon/kresd -n -c /path/to/kresd.conf
+Restart=always
+RestartSec=2
+
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+

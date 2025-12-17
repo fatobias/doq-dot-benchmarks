@@ -1,0 +1,19 @@
+[Unit]
+Description=RouteDNS DoQ (benchmark)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=ftobias
+WorkingDirectory=/path/to/working/dir
+ExecStart=/patht/to/bin/routedns /path/to/routedns/doq_routedns.toml
+Restart=always
+RestartSec=2
+
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+
